@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 use \DateTime;
-use App\Helpers\text;
+use App\helpers\text;
 
 class Post {
 

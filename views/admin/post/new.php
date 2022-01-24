@@ -3,7 +3,7 @@ use App\Connection;
 use App\Table\PostTable;
 use App\HTML\Form;
 use App\Validators\PostValidator;
-use App\Helpers\tools;
+use App\helpers\tools;
 use App\Model\Post;
 
 $errors = [];

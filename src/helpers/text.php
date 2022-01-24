@@ -1,5 +1,5 @@
 <?php 
-namespace App\Helpers;
+namespace App\helpers;
 
 class text {
     public static function excerpt(string $content, int $limit = 40): string
