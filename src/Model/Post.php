@@ -1,7 +1,5 @@
 <?php
 namespace App\Model;
-use App\Helpers\Text;
-use App\Helpers\textes;
 use \DateTime;
 
 class Post {
@@ -68,7 +66,17 @@ class Post {
         if($this->content === NULL){
             return null;
         }
-        return nl2br(htmlentities(textes::excerpt($this->content, 60)));
+
+        function excerpt(string $content, int $limit = 40)
+    {
+        if (mb_strlen($content) <= $limit){
+            return $content;
+        }
+        $lastspace = mb_strpos($content, ' ', $limit);
+        return mb_substr($content, 0, $lastspace) . "...";
+    }
+
+        return nl2br(htmlentities(excerpt($this->content, 60)));
     }
 
     public function getCreatedAt(): DateTime
