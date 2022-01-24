@@ -1,4 +1,4 @@
 .htaccess
 notes.txt
 .env
-vendor/
+/vendor/

@@ -3,7 +3,7 @@ require dirname(__DIR__) . '/vendor/autoload.php';
 
 $faker = Faker\Factory::create('fr_FR');
 
-$pdo = new PDO ("mysql:dbname={$_SERVER["DB_NAME"]};host={$_SERVER["HOST_NAME"]}", "{$_SERVER["USERNAME"]}", "{$_SERVER["PASSWORD"]}", 
+$pdo = new PDO ("mysql:dbname={$_ENV["DB_NAME"]};host={$_ENV["HOST_NAME"]}", "{$_ENV["USERNAME"]}", "{$_ENV["PASSWORD"]}", 
 [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
 
 /*
