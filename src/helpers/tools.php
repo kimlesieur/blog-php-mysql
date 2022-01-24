@@ -1,7 +1,7 @@
 <?php 
 namespace App\Helpers;
 
-class ObjectTools {
+class tools {
 
     public static function fillFields($object, array $data, array $fields)
     {

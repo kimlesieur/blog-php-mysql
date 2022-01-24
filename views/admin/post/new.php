@@ -3,7 +3,7 @@ use App\Connection;
 use App\Table\PostTable;
 use App\HTML\Form;
 use App\Validators\PostValidator;
-use App\Helpers\ObjectTools;
+use App\Helpers\tools;
 use App\Model\Post;
 
 $errors = [];
@@ -16,7 +16,7 @@ if (!empty($_POST)){
     $postTable = new PostTable($pdo);
 
     //Définition d'une classe avec méthode statique pour remplir les champs des formulaires 
-    ObjectTools::fillFields($post, $_POST, ['name', 'slug', 'content', 'created_at']);
+    tools::fillFields($post, $_POST, ['name', 'slug', 'content', 'created_at']);
 
     $v = new PostValidator($_POST, $postTable, $post->getId());
     if ($v->validate()){

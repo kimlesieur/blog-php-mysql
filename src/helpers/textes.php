@@ -1,7 +1,7 @@
 <?php 
 namespace App\Helpers;
 
-class text {
+class textes {
     public static function excerpt(string $content, int $limit = 40): string
     {
         if (mb_strlen($content) <= $limit){
