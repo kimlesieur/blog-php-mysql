@@ -67,7 +67,7 @@ class Post {
         if($this->content === NULL){
             return null;
         }
-        return nl2br(htmlentities(Text::excerpt($this->content, 60)));
+        return nl2br(htmlentities(text::excerpt($this->content, 60)));
     }
 
     public function getCreatedAt(): DateTime
