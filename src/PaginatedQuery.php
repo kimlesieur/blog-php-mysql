@@ -3,6 +3,7 @@ namespace App;
 use \PDO;
 use \Exception;
 use App\Model\Post;
+use App\Url;
 
 class PaginatedQuery {
 
@@ -68,7 +69,7 @@ HTML;
 
     public function getCurrentPage(): int
     {
-       return URL::getPositiveInt('page', 1);
+       return Url::getPositiveInt('page', 1);
     }
 
     public function getPages(): int
