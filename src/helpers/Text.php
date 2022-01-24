@@ -11,6 +11,4 @@ class text {
         return mb_substr($content, 0, $lastspace) . "...";
     }
 
-    
-
 }
